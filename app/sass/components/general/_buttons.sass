@@ -1,0 +1,88 @@
+@import "vars"
+
+.btns-row
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	.main-btn,.second-btn
+		margin: 0 7.5px
+
+.main-btn,.second-btn
+	display: inline-block
+	font-family: $Roboto
+	font-size: 20px
+	line-height: 24px
+	font-weight: 500
+	text-align: center
+	white-space: nowrap
+	border-radius: 5px
+	position: relative
+	overflow: hidden
+	z-index: 2
+
+.main-btn
+	padding: 16px 40px
+	color: #fff
+	box-shadow: 0px 5px 20px rgba(85, 85, 85, 0.25)
+	&::before,&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		transition: $transition
+		z-index: -1
+	&::before
+		background: linear-gradient(103.3deg, #8A90FF 0%, #4A53FF 100%)
+	&::after
+		background: linear-gradient(104.84deg, #4A53FF 0%, #656DFF 100%)
+		opacity: 0
+		visibility: hidden
+	&:hover
+		&::before
+			opacity: 0
+			visibility: hidden
+		&::after
+			opacity: 1
+			visibility: visible
+
+.second-btn
+	color: $colorAccent
+	border: 1px solid $colorAccent
+	padding: 15px 39px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		transition: $transition
+		z-index: -1
+		background: linear-gradient(103.3deg, #8A90FF 0%, #4A53FF 100%)
+		opacity: 0
+		visibility: hidden
+	&:hover
+		border-color: transparent
+		color: #fff
+		&::before
+			opacity: 1
+			visibility: visible
+
+@media only screen and (max-width : 540px)
+	.main-btn,.second-btn
+		font-size: 18px
+		line-height: 24px
+	.main-btn
+		padding: 12px 42px
+	.second-btn
+		padding: 11px 31px
+	.btns-row
+		display: block
+		max-width: 320px
+		margin: 0 auto
+		text-align: center
+		.main-btn,.second-btn
+			margin: 0 auto 12px
+			min-width: 195px

@@ -1,0 +1,82 @@
+@import "vars"
+
+.connect
+	padding: 80px 0 90px
+	position: relative
+	.blot
+		&-5
+			top: -205px
+			left: 0
+		&-6
+			top: -410px
+			right: 0
+	.section-title
+		text-align: center
+		padding-bottom: 80px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -15px
+	&-col
+		width: 50%
+		padding: 0 15px 20px
+	&-wrap
+		height: 100%
+		padding: 32px 27px
+		background: #fff
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07)
+		border-radius: 5px
+		p
+			font-size: 16px
+			line-height: 2
+			letter-spacing: 0.01em
+			padding-bottom: 32px
+	&-title
+		font-family: $Montserrat
+		font-size: 22px
+		line-height: 36px
+		font-weight: 600
+		letter-spacing: 0.01em
+		padding-bottom: 8px
+	&-link
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		font-size: 16px
+		line-height: 20px
+		color: $colorAccent
+		letter-spacing: 0.01em
+		svg
+			display: inline-block
+			margin-left: 8px
+
+@media only screen and (max-width : 1000px)
+	.connect
+		.blot
+			&-5
+				top: -150px
+				left: -27px
+			&-6
+				display: none
+
+@media only screen and (max-width : 768px)
+	.connect
+		padding: 20px 0 0
+		.section-title
+			padding-bottom: 30px
+		&-col
+			width: 100%
+
+@media only screen and (max-width : 540px)
+	.connect
+		padding: 12px 0 0
+		&-col
+			padding: 0 15px 12px
+		&-wrap
+			padding: 24px 20px 28px
+			p
+				line-height: 28px
+				padding-bottom: 17px
+		&-title
+			font-size: 18px
+			line-height: 2

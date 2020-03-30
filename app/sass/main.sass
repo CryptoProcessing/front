@@ -1,0 +1,202 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #7E95AD
+
+*:-moz-placeholder
+	color: #7E95AD
+
+*::-moz-placeholder
+	color: #7E95AD
+
+*:-ms-input-placeholder
+	color: #7E95AD
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+
+a, a:hover, a:focus, a:active, a:visited
+	text-decoration: none
+	transition: $transition
+
+ul
+	list-style: none
+
+html
+	overflow-x: hidden
+
+body
+	font-family: $PTSans
+	font-size: 16px
+	line-height: 1.3
+	color: #495766
+	overflow-x: hidden
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	padding-top: 140px
+	background: linear-gradient(267.76deg, #FEFEFE 0%, rgba(255, 255, 255, 0) 0.01%, #F9F9F9 100%), #FDFDFD
+
+img
+	max-width: 100%
+	height: auto
+
+button
+	cursor: pointer
+	transition: $transition
+	border: none
+	background: transparent
+
+.wrapper
+	max-width: 1210px
+	margin: 0 auto
+	padding: 0 15px
+	position: relative
+	z-index: 2
+	&-big
+		max-width: 1398px
+
+.mark-ico
+	display: block
+	width: 24px
+	height: 24px
+	border-radius: 50%
+	background: $colorAccent
+	position: relative
+	margin: 4px 16px 0 0
+	svg
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+
+.blot
+	position: absolute
+	svg
+		display: block
+
+.checkbox
+	display: inline-block
+	position: relative
+	padding: 0 0 0 26px
+	span
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		border: 1px solid #cbcbcb
+		background-repeat: no-repeat
+		background-position: center
+		transition: .1s linear
+		width: 16px
+		height: 16px
+		border-radius: 4px
+	p
+		font-size: 14px
+		text-transform: uppercase
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		cursor: pointer
+		z-index: 2
+		&:checked
+			& + span
+				background-image: url(../img/checkmark-w.svg)
+				background-size: 10px
+				background-color: $accent
+				border-color: $accent
+
+@import "components/general/buttons"
+@import "components/general/inputs"
+@import "components/general/titles"
+@import "components/header"
+@import "components/main"
+@import "components/integration"
+@import "components/advantages"
+@import "components/connect"
+@import "components/footer"
+
+@media only screen and (max-width : 1000px)
+	body
+		padding-top: 92px
+
+/* -- header -- */
+.header
+
+/* -- main -- */
+.main
+
+.tab
+	display: none
+	&-wrap
+		margin: 30px 0
+	&-list
+		li
+			a
+				&.active
+					color: red
+	&.tab-active
+		display: block
+
+/* -- footer -- */
+.footer
+
+/* -- modal -- */
+.success
+	display: none
+	.modal-content__subtitle
+		max-width: 230px
+		margin: 0 auto
+
+.modal
+	width: 96%
+	max-width: 640px
+	position: fixed
+	top: 50%
+	left: 50%
+	background: #fff
+	z-index: 99999
+	border-radius: 6px
+	transform: translate(-50%,-50%) scale(0.2)
+	visibility: hidden
+	opacity: 0
+	transition: all 0.3s
+	overflow-y: auto
+	padding: 100px 15px
+	&-content
+		&.form-active
+			max-width: 400px
+			.callback
+				display: none
+			.success
+				display: block
+	&.open
+		visibility: visible
+		opacity: 1
+		transform: translate(-50%,-50%) scale(1)
+
+.modal-overlay
+	position: fixed
+	width: 100%
+	height: 100%
+	visibility: hidden
+	opacity: 0
+	top: 0
+	left: 0
+	z-index: 1000
+	background: rgba(0,0,0,0.8)
+	transition: all 0.3s
+	&.open-overlay
+		visibility: visible
+		opacity: 1
+
+@import "_media"

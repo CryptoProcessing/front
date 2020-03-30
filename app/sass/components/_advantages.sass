@@ -1,0 +1,104 @@
+@import "vars"
+
+.advantages
+	padding: 80px 0 21px
+	margin-bottom: 20px
+	position: relative
+	.blot
+		&-3
+			top: 10px
+			left: 0
+		&-4
+			top: -350px
+			right: 0
+		&-5
+			top: -140px
+			left: 0
+		&-6
+			top: -500px
+			right: 0
+	&-row
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		margin: 0 -15px
+	&-col
+		width: 33.333%
+		padding: 0 15px 60px
+		text-align: center
+	&-wrap
+		p
+			font-size: 15px
+			line-height: 32px
+			max-width: 320px
+			margin: 0 auto
+	&-ico
+		display: block
+		width: 84px
+		height: 84px
+		background: #F0F3FE
+		border-radius: 6px
+		position: relative
+		margin: 0 auto 20px
+		svg
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+	&-title
+		font-family: $Montserrat
+		font-size: 22px
+		line-height: 36px
+		font-weight: 600
+		letter-spacing: 0.01em
+		padding-bottom: 12px
+	&-second
+		padding-bottom: 40px
+		.page-title
+			padding-bottom: 0
+
+@media only screen and (max-width : 1000px)
+	.advantages
+		.blot
+			&-3
+				top: 10px
+				left: -150px
+			&-4
+				top: 350px
+				right: -210px
+			&-5
+				top: -100px
+				left: -140px
+			&-6
+				top: 200px
+				right: -220px
+
+@media only screen and (max-width : 768px)
+	.advantages
+		padding: 40px 0 10px
+		.section-info
+			padding-bottom: 0
+			.page-title
+				padding-bottom: 32px
+			p
+				display: none
+		&-col
+			width: 50%
+			padding-bottom: 36px
+
+@media only screen and (max-width : 540px)
+	.advantages
+		padding: 12px 0 0
+		margin: 0
+		&-col
+			width: 100%
+		&-wrap
+			p
+				line-height: 28px
+		&-ico
+			margin-bottom: 12px
+		&-title
+			font-size: 18px
+			line-height: 20px
+			padding-bottom: 8px

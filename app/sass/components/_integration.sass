@@ -1,0 +1,225 @@
+@import "vars"
+
+.integration
+	margin-bottom: 20px
+	&-wrap
+		background: #fff
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03)
+		border-radius: 10px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		max-width: 1220px
+		margin: 0 auto
+		padding: 80px 20px 76px
+	&-main
+		max-width: 468px
+		width: 100%
+		min-width: 300px
+	&-info
+		padding-left: 56px
+		margin-bottom: 20px
+		.section-title
+			padding-bottom: 32px
+		p
+			font-size: 16px
+			line-height: 2
+			color: $colorGray
+			letter-spacing: 0.01em
+			padding-bottom: 32px
+		&__text
+			padding-left: 33px
+	&-list
+		padding-bottom: 20px
+		li
+			display: flex
+			flex-flow: row nowrap
+			padding-bottom: 12px
+			font-size: 16px
+			line-height: 32px
+			color: $colorGray
+			letter-spacing: 0.01em
+	&-second
+		.integration-row
+			align-items: flex-start
+			padding-bottom: 57px
+			p
+				padding-bottom: 0
+		.main-btn
+			margin-bottom: 20px
+		.btn-mob
+			display: none
+
+.payment
+	svg,img
+		display: block
+	&-col
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07)
+		border-radius: 6px
+		padding: 40px
+		position: relative
+		max-width: 440px
+		margin-bottom: 24px
+		&__img
+			position: absolute
+			top: -30px
+			left: -18px
+		&__top
+			position: relative
+			padding-right: 90px
+		&__scan
+			position: absolute
+			top: 0
+			right: 0
+	&-order,&-btc,&-price
+		display: block
+		font-family: $Montserrat
+		font-weight: 600
+		letter-spacing: 0.01em
+	&-order
+		font-size: 18px
+		line-height: 22px
+		margin: 7px 0 11px
+	&-btc
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		font-size: 22px
+		line-height: 1
+		color: #000
+		margin-bottom: 11px
+	&-copy
+		display: inline-block
+		margin-left: 10px
+		cursor: pointer
+	&-price
+		font-size: 18px
+		line-height: 20px
+		color: #7E95AD
+		margin-bottom: 34px
+	&-input
+		position: relative
+		input
+			display: block
+			width: 100%
+			height: 36px
+			background: #F0F3FE
+			border-radius: 47px
+			font-family: $Roboto
+			font-size: 14px
+			color: rgba(0, 0, 0, 0.63)
+			border: none
+			letter-spacing: 0.01em
+			padding: 0 60px 0 13px
+	&-btn
+		position: absolute
+		top: 50%
+		right: 6px
+		transform: translate(0,-50%)
+		width: 42px
+		height: 28px
+		background: $colorAccent
+		border-radius: 15px
+		cursor: pointer
+		svg,img
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+	.integration
+		&-row
+			max-width: 1170px
+			padding: 130px 0 124px
+		&-main
+			max-width: 454px
+		&-info
+			.section-title
+				padding-bottom: 22px
+
+@media only screen and (max-width : 1240px)
+	.payment-col__img
+		left: -5px
+
+@media only screen and (max-width : 1000px)
+	.integration
+		&-main
+			max-width: 400px
+			min-width: auto
+		&-img
+			svg
+				display: block
+				max-width: 400px
+				width: 100%
+				height: auto
+
+@media only screen and (max-width : 768px)
+	.integration
+		&-row
+			display: block
+			padding: 96px 20px 50px
+			position: relative
+			.section-title
+				position: absolute
+				top: 32px
+				left: 0
+				width: 100%
+				text-align: center
+				padding: 0
+		&-main
+			margin: 0 auto 20px
+		&-info
+			padding: 0
+			text-align: center
+			margin: 0
+			&__text
+				padding: 0
+			p
+				padding-bottom: 20px
+				font-size: 15px
+				line-height: 24px
+		&-list
+			max-width: 320px
+			margin: 0 auto
+		&-second
+			.main-btn
+				display: none
+			.btn-mob
+				display: inline-block
+				margin: 20px 0 0
+	.payment
+		&-col
+			margin: 0
+			max-width: 100%
+		&-logo
+			display: none
+		.integration-row
+			padding: 122px 0 50px
+
+@media only screen and (max-width : 540px)
+	.integration
+		&-row
+			padding: 92px 20px 30px
+		&-second
+			.integration-row
+				padding-bottom: 30px
+	.payment
+		&-col
+			padding: 34px 15px 50px
+			&__img
+				top: 10px
+				left: auto
+				right: 10px
+			&__top
+				padding: 0
+			&__scan
+				position: static
+				padding-bottom: 20px
+		&-btc
+			font-size: 18px
+			line-height: 22px
+		&-price
+			margin-bottom: 20px
+		.integration-row
+			padding-bottom: 30px
