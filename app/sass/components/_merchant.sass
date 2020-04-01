@@ -1,0 +1,90 @@
+@import "vars"
+
+.merchant
+	.wrapper
+		display: flex
+		align-items: center
+		min-height: 100vh
+	&-wrap
+		padding: 64px 0
+		max-width: 700px
+		width: 100%
+		margin: 0 auto
+	&-top
+		text-align: center
+		margin-bottom: 40px
+		.section-title
+			padding-bottom: 16px
+		p
+			font-size: 24px
+			line-height: 1.333
+			color: #495766
+	&-block
+		max-width: 520px
+		width: 100%
+		background: #fff
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07)
+		border-radius: 10px
+		padding: 40px 25px 58px
+		margin: 0 auto 48px
+		.section-title
+			text-align: center
+			padding-bottom: 40px
+	&-row,&-currency
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+	&-row
+		justify-content: space-between
+		padding: 16px 19px 16px 12px
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07)
+		border-radius: 5px
+		max-width: 416px
+		margin: 0 auto 12px
+	&-ico
+		min-width: 40px
+		width: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 20px
+	&-name
+		display: block
+		font-family: $Montserrat
+		font-size: 17px
+		font-weight: 600
+		color: #495766
+	&-price
+		font-family: $Montserrat
+		font-size: 14px
+		font-weight: normal
+		color: $colorGray
+	&-bottom
+		text-align: center
+	&-logo
+		margin-bottom: 15px
+
+@media only screen and (max-width : 540px)
+	.merchant
+		&-wrap
+			padding: 35px 0
+		&-top
+			margin-bottom: 30px
+			.page-title
+				padding-bottom: 20px
+			p
+				font-size: 18px
+		&-block
+			padding: 30px 15px
+			margin-bottom: 20px
+			.section-title
+				padding-bottom: 26px
+
+@media only screen and (max-width : 400px)
+	.merchant
+		&-row
+			padding-right: 12px
+		&-ico
+			margin-right: 10px
+		&-name
+			font-size: 14px

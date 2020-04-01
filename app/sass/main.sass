@@ -40,10 +40,17 @@ body
 	-webkit-font-smoothing: antialiased
 	padding-top: 140px
 	background: linear-gradient(267.76deg, #FEFEFE 0%, rgba(255, 255, 255, 0) 0.01%, #F9F9F9 100%), #FDFDFD
+	&.body-step
+		padding-top: 0
+		background: #F1F4FF
 
 img
 	max-width: 100%
 	height: auto
+
+input,textarea,select,button
+	font-family: $Roboto
+	font-size: 16px
 
 button
 	cursor: pointer
@@ -75,128 +82,46 @@ button
 		left: 50%
 		transform: translate(-50%,-50%)
 
-.blot
+.blot,.card
 	position: absolute
-	svg
+	svg,img
 		display: block
 
-.checkbox
-	display: inline-block
-	position: relative
-	padding: 0 0 0 26px
-	span
-		display: block
-		position: absolute
-		top: 0
+.card
+	z-index: 2
+	&-1
+		top: 30px
 		left: 0
-		border: 1px solid #cbcbcb
-		background-repeat: no-repeat
-		background-position: center
-		transition: .1s linear
-		width: 16px
-		height: 16px
-		border-radius: 4px
-	p
-		font-size: 14px
-		text-transform: uppercase
-	input
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		opacity: 0
-		cursor: pointer
-		z-index: 2
-		&:checked
-			& + span
-				background-image: url(../img/checkmark-w.svg)
-				background-size: 10px
-				background-color: $accent
-				border-color: $accent
+	&-2
+		top: -70px
+		right: 0
 
 @import "components/general/buttons"
 @import "components/general/inputs"
 @import "components/general/titles"
+@import "components/general/modal"
 @import "components/header"
 @import "components/main"
 @import "components/integration"
 @import "components/advantages"
 @import "components/connect"
 @import "components/footer"
+@import "components/merchant"
+
+.tab
+	display: none
+	&.tab-active
+		display: block
+
+@media only screen and (max-width : 1100px)
+	.card
+		&-2
+			right: -50px
 
 @media only screen and (max-width : 1000px)
 	body
 		padding-top: 92px
-
-/* -- header -- */
-.header
-
-/* -- main -- */
-.main
-
-.tab
-	display: none
-	&-wrap
-		margin: 30px 0
-	&-list
-		li
-			a
-				&.active
-					color: red
-	&.tab-active
-		display: block
-
-/* -- footer -- */
-.footer
-
-/* -- modal -- */
-.success
-	display: none
-	.modal-content__subtitle
-		max-width: 230px
-		margin: 0 auto
-
-.modal
-	width: 96%
-	max-width: 640px
-	position: fixed
-	top: 50%
-	left: 50%
-	background: #fff
-	z-index: 99999
-	border-radius: 6px
-	transform: translate(-50%,-50%) scale(0.2)
-	visibility: hidden
-	opacity: 0
-	transition: all 0.3s
-	overflow-y: auto
-	padding: 100px 15px
-	&-content
-		&.form-active
-			max-width: 400px
-			.callback
-				display: none
-			.success
-				display: block
-	&.open
-		visibility: visible
-		opacity: 1
-		transform: translate(-50%,-50%) scale(1)
-
-.modal-overlay
-	position: fixed
-	width: 100%
-	height: 100%
-	visibility: hidden
-	opacity: 0
-	top: 0
-	left: 0
-	z-index: 1000
-	background: rgba(0,0,0,0.8)
-	transition: all 0.3s
-	&.open-overlay
-		visibility: visible
-		opacity: 1
+	.card
+		display: none
 
 @import "_media"

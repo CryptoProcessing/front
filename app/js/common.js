@@ -16,13 +16,16 @@ $(document).ready(function(){
 		
 	$('.button-modal').on('click',function(e){
 		e.preventDefault();
-		var id = $(this).attr('href');
+
 		$(modalCont).removeClass('open');
+		$('.modal-overlay').removeClass('open-overlay');
+		
+		var id = $(this).attr('href');
 		$(id).addClass('open');
-	  $('#info-form').val(hiddenValue);
+		$('.modal-overlay').addClass('open-overlay');
 	});
 
-	$('.cancel, .modal-overlay').on('click',function(){
+	$('.modal-close, .modal-overlay').on('click',function(){
 		$(modalCont).removeClass('open');
 		$('.modal-overlay').removeClass('open-overlay');
 	});
